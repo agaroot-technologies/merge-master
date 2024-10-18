@@ -1,0 +1,28 @@
+{
+  "name": "merge-master",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist --license licenses.txt",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/core": "^6.1.2",
+    "@octokit/graphql": "^8.1.1",
+    "@octokit/rest": "^21.0.0"
+  },
+  "devDependencies": {
+    "@agaroot/eslint-config-common": "^3.0.6",
+    "@agaroot/eslint-config-definer": "^1.0.5",
+    "@agaroot/eslint-config-javascript": "^2.0.7",
+    "@agaroot/eslint-config-style": "^2.0.9",
+    "@agaroot/eslint-config-typescript": "^2.0.8",
+    "@octokit/graphql-schema": "^15.25.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@vercel/ncc": "^0.38.2",
+    "eslint": "^8.57.1",
+    "typescript": "^5.5.3"
+  },
+  "packageManager": "pnpm@9.12.1"
+}
