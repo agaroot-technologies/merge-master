@@ -18,6 +18,14 @@ If there is a PR that is running CI and following the main branch, Marge Master 
 
 Github Personal Access Token or Github App Token is required to use this action because a commit created via default Github Action Token cannot trigger another Github Action.
 
+The Token or App must have the following permissions:
+- checks: read
+- metadata: read
+- pull_requests: write
+- issues: write
+- code: write
+
+
 ## With Personal Access Token
 
 ```yaml
@@ -42,20 +50,12 @@ jobs:
   merge-master:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@5d869da34e18e7287c1daad50e0b8ea0f506ce69 # v1.11.0
-        id: app-token
-        with:
-          app-id: ${{ vars.AUTO_UPDATE_BRANCH_BOT_APP_ID }}
-          private-key: ${{ secrets.AUTO_UPDATE_BRANCH_BOT_PRIVATE_KEY }}
       - uses: agaroot-technologies/merge-master@v1.0.0
         with:
           github-token: ${{ secrets.GITHUB_PAT_TOKEN }}
 ```
 
 ## With Github App Token
-
-The Github App is required to have the following permissions:
-
 
 ```yaml
 name: Merge Master
