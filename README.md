@@ -1,3 +1,8 @@
+> [!CAUTION]
+> The repository has been archived and will no longer be maintained.  
+> Moving forward, maintenance will be conducted in the following repository:  
+> https://github.com/praha-inc/merge-master
+
 # Merge Master
 
 automatically merge main branch to topic branch or rebase renovate bot PRs.
